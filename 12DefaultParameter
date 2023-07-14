@@ -1,0 +1,25 @@
+//When we have provide/passed nothing then it will automatically shows default value to output
+
+function hello(item){
+   console.log(item);
+}
+
+hello(); //with the simple function if we do not provide anything it will give undefined
+
+//but what if i do not provide anything but it should pick up default value
+
+function hello(item){
+    if(!item) item ="default";
+    console.log(item);
+} //it will give us default but what if we have multiple items(parameters) and we want all items defualt at the time,
+//then we have to give multiple lines of code to each item to make it defualt 
+
+//so instead of this problem we use new method of ES6 is default parameter, so instead of above extra line
+//we will use like-
+
+function hello(item = "default"){
+    console.log(item);
+}
+
+hello(null); //if u provide null, it will give null value otherwise as default 
+//when the no data exist that time we will use/utilize default parameter
